@@ -26,3 +26,9 @@ print(user.id,
 # printing all given data
 for user in users:
     print(f"user id: {user.id}, user name: {user.name}, user age: {user.age}")
+
+# to filter and access
+to_filter = session.query(User).filter_by(age=30).all()
+print(to_filter)
+to_get_first = session.query(User).filter_by(age=30).first()
+print(to_get_first)
