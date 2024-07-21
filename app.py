@@ -10,7 +10,6 @@ user1 = User(name='Reza', age=40)
 user2 = User(name='Ali', age=15)
 session.add(user)
 
-
 session.add_all([user1, user2])
 session.commit()
 
@@ -18,9 +17,12 @@ session.commit()
 users = session.query(User).all()
 print(users)
 
-# accessing user's parameters
-
+# accessing user's given data
 user = users[0]
 print(user.id,
       user.name,
       user.age)
+
+# printing all given data
+for user in users:
+    print(f"user id: {user.id}, user name: {user.name}, user age: {user.age}")
