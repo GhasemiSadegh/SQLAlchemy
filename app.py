@@ -1,6 +1,6 @@
 from sqlalchemy.orm import sessionmaker
 from models import User, engine
-
+import random
 Session = sessionmaker(bind=engine)
 
 session = Session()
@@ -44,4 +44,13 @@ session.commit()
 
 # to delete a user
 session.delete(user0)
+session.commit()
+
+names = ["Sgt_Smith", "Lt_Johnson", "Cpt_Williams", "Pvt_Jones", "Cpl_Brown", "Maj_Davis", "Col_Miller", "Gen_Wilson", "Pfc_Taylor", "Sgt_Anderson"]
+ages = [25, 30, 35, 22, 28, 40, 45, 50, 27, 33]
+
+for i in range (10):
+    user = User(name=random.choice(names), age=random.choice(ages))
+    session.add(user)
+
 session.commit()
