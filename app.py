@@ -5,10 +5,10 @@ Session = sessionmaker(bind=engine)
 
 session = Session()
 
-user = User(name='Sadegh', age=30)
+user0 = User(name='Sadegh', age=30)
 user1 = User(name='Reza', age=40)
 user2 = User(name='Ali', age=15)
-session.add(user)
+session.add(user0)
 
 session.add_all([user1, user2])
 session.commit()
@@ -32,3 +32,14 @@ to_filter = session.query(User).filter_by(age=30).all()
 print(to_filter)
 to_get_first = session.query(User).filter_by(age=30).first()
 print(to_get_first)
+
+# to filter with one or none
+one_none_filter = session.query(User).filter_by(id=1).one_or_none()
+print(one_none_filter)
+
+# to update a cell
+user0.name = 'Not Sadegh Anymore'
+print(user.name)
+session.commit()
+
+# to delete a user
