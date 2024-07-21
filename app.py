@@ -1,5 +1,6 @@
 from sqlalchemy.orm import sessionmaker
 from models import User, engine
+from sqlalchemy import or_, and_
 import random
 
 Session = sessionmaker(bind=engine)
@@ -25,3 +26,7 @@ for user in users:
 for user in other_users:
     print(f'user {user.name} is over 40')
 
+# or_ and_
+users = session.query(User).where(or_(User.age > 10, User.name == 'Smith'))
+for user in users:
+    print(user.age, user.name)
