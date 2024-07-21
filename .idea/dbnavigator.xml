@@ -18,6 +18,7 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="2038ea08-7e99-461b-9897-3675facf8f83">
       <console name="mydata" type="STANDARD" schema="" session="Main" />
+      <console name="The Connection" type="STANDARD" schema="" session="Main" />
     </connection>
     <connection id="16312c01-ba96-40c4-81e5-d1ce79aec59c">
       <console name="Connection" type="STANDARD" schema="" session="Main" />
@@ -36,10 +37,8 @@
     <connection id="16312c01-ba96-40c4-81e5-d1ce79aec59c" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="2038ea08-7e99-461b-9897-3675facf8f83" dataset="mydata.mytable" active-filter-id="">
-      <filter id="49de382f-bc6d-47ba-a423-d6046ba8fe6f" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="name" operator="=" value="" active="true" />
-      </filter>
+    <filter-actions connection-id="2038ea08-7e99-461b-9897-3675facf8f83" dataset="mydata.mytable" active-filter-id="49de382f-bc6d-47ba-a423-d6046ba8fe6f">
+      <filter id="49de382f-bc6d-47ba-a423-d6046ba8fe6f" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND" />
     </filter-actions>
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
