@@ -73,3 +73,5 @@ print('next command')
 users = session.query(User).order_by(User.age, User.name).all()
 for user in users:
     print(f"user id: {user.id}, user name: {user.name}, user age: {user.age}")
+
+session.commit()

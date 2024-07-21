@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
-db_url = "sqlite:///mydata.sqlite"
+db_url = "sqlite:///mydata.SQLite"
 engine = create_engine(db_url)
 
 
