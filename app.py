@@ -43,3 +43,5 @@ print(user.name)
 session.commit()
 
 # to delete a user
+session.delete(user0)
+session.commit()
