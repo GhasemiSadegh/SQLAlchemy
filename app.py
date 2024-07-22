@@ -23,6 +23,6 @@ session = Session()
 # for user in users:
 #     print(users)
 
-users = session.query(User.name, User.age, func.count(User.id)).group_by(User.name).all()
+users = session.query(User.name, func.count(User.id)).group_by(User.name).all()
 for user in users:
     print(user)
