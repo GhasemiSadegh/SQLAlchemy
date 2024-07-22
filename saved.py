@@ -39,7 +39,7 @@
 # # to delete a user
 # session.delete(user0)
 # session.commit()
-
+#
 # # query all users ordered by age (ascending)
 # users = session.query(User).order_by(User.age).all()
 # for user in users:
@@ -58,3 +58,16 @@
 #     print(f"user id: {user.id}, user name: {user.name}, user age: {user.age}")
 #
 # session.commit()
+
+# users = session.query(User).filter_by(age=35).all()
+# other_users = session.query(User).where(User.age >= 40).all()
+# for user in users:
+#     print(f'user {user.name} age equals {user.age}')
+#
+# for user in other_users:
+#     print(f'user {user.name} is over 40')
+#
+# # or_ and_
+# users = session.query(User).where(or_(User.age > 10, User.name == 'Smith'))
+# for user in users:
+#     print(user.age, user.name)
