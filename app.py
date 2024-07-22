@@ -1,7 +1,7 @@
 from sqlalchemy.orm import sessionmaker
 from models import User, engine
 from sqlalchemy import or_, and_, not_
-import random
+# import random
 
 Session = sessionmaker(bind=engine)
 
@@ -18,6 +18,10 @@ session = Session()
 #
 # session.commit()
 
-specific_user = session.query(User).where(User.age > 10,
-                                          User.name == 'Brown',
-                                          )
+specific_users = session.query(User).where(
+                                            and_(
+                                                not_(User.age >= 35),
+                                                not_(User.name == 'Smith'))).all()
+
+for user in specific_users:
+    print(f"{user.age} and {user.name}")
