@@ -18,10 +18,6 @@ session = Session()
 #
 # session.commit()
 
-specific_users = session.query(User).where(
-                                            and_(
-                                                not_(User.age >= 35),
-                                                not_(User.name == 'Smith'))).all()
-
-for user in specific_users:
-    print(f"{user.age} and {user.name}")
+users = session.query(User.age).all()
+for user in users:
+    print(user.age)

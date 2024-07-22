@@ -71,3 +71,11 @@
 # users = session.query(User).where(or_(User.age > 10, User.name == 'Smith'))
 # for user in users:
 #     print(user.age, user.name)
+
+# specific_users = session.query(User).where(
+#                                             and_(
+#                                                 not_(User.age >= 35),
+#                                                 not_(User.name == 'Smith'))).all()
+#
+# for user in specific_users:
+#     print(f"{user.age} and {user.name}")
