@@ -1,6 +1,7 @@
 from sqlalchemy.orm import sessionmaker
 from models import User, engine
-from sqlalchemy import or_, and_, not_
+from sqlalchemy import func
+# from sqlalchemy import or_, and_, not_
 # import random
 
 Session = sessionmaker(bind=engine)
@@ -18,6 +19,10 @@ session = Session()
 #
 # session.commit()
 
-users = session.query(User.age).all()
+# users = session.query(User.age).group_by(User.age).all()
+# for user in users:
+#     print(users)
+
+users = session.query(User.name, User.age, func.count(User.id)).group_by(User.name).all()
 for user in users:
-    print(user.age)
+    print(user)
