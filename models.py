@@ -1,8 +1,8 @@
-from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
-db_url = "sqlite:///mydata.SQLite"
+db_url = 'sqlite:///mydata.sqlite'
 engine = create_engine(db_url)
 
 
