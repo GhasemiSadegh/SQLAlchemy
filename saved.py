@@ -79,3 +79,7 @@
 #
 # for user in specific_users:
 #     print(f"{user.age} and {user.name}")
+
+names = ["Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Taylor", "Anderson"]
+
+ages = [25, 30, 35, 22, 28, 40, 45, 50, 27, 33]
