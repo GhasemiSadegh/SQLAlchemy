@@ -1,8 +1,9 @@
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
-db_url = 'sqlite:///mydata.sqlite'
+db_url = 'sqlite:///db.sqlite'
 engine = create_engine(db_url)
 
 
@@ -14,3 +15,12 @@ class User(Base):
 
 
 Base.metadata.create_all(engine)
+
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+user1 = User(name='Ali', age=25)
+session.add(user1)
+session.commit()
+session.close()
