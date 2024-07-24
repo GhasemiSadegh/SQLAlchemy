@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Integer, create_engine, not_
+from sqlalchemy import Column, String, Integer, create_engine, not_, and_, or_
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 Base = declarative_base()
@@ -27,8 +27,7 @@ session.commit()
 # session.add_all([user1, user2, user3, user4])
 # session.commit()
 
-users = session.query(User).where(User.age >= 34)
+users = session.query(User).where(and_(User.age >= 34, User.name == "Jalil", User.id > 4)).all()
 
 for user in users:
     print(user.name, user.age)
-
