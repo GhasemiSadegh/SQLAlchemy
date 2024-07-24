@@ -1,6 +1,8 @@
-from sqlalchemy import Column, String, Integer, create_engine
-from sqlalchemy.orm import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy import Column, String, Integer, create_engine, or_, and_, not_
+
+
+from sqlalchemy.orm import declarative_base, sessionmaker
+
 
 Base = declarative_base()
 db_url = 'sqlite:///db.sqlite'
@@ -17,9 +19,9 @@ class User(Base):
 Base.metadata.create_all(engine)
 
 
-# Session = sessionmaker(bind=engine)
-# session = Session()
-# session.commit()
+Session = sessionmaker(bind=engine)
+session = Session()
+session.commit()
 
 # user1 = User(name='Ali', age=25)
 # user2 = User(name='Kazem', age=34)
@@ -31,3 +33,6 @@ Base.metadata.create_all(engine)
 # session.close()
 
 
+users = session.query(User).filter_by(age=34)
+for user in users:
+    print(user.name, user.age)
