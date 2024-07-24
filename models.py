@@ -38,7 +38,11 @@ session.commit()
 #     and_(User.name == "Jalil")
 # ))
 
-users = session.query(User.name, func.count(User.id)).group_by(User.name).all()
+user_tuple = (session.query(User.age, func.count(User.id))
+              .filter(User.age >= 34)
+              .filter(User.age < 50)
 
-for user in users:
-    print(user)
+              .group_by(User.age))
+
+for age, count in user_tuple:
+    print(age, count)
