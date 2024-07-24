@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, Integer, create_engine, not_, and_, or_
-from sqlalchemy import func
+# from sqlalchemy import func
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 Base = declarative_base()
@@ -28,21 +28,11 @@ session.commit()
 # session.add_all([user1, user2, user3, user4])
 # session.commit()
 
-# users = session.query(User).where(or_(User.age >= 34, User.name == "Jalil", User.id > 4)).all()
-#
-# for user in users:
-#     print(user.name, user.age)
+ali_only = True
+over_33 = True
+users = session.query(User)
 
-# users = session.query(User).where(or_(
-#     and_(User.age > 30, User.age == 34),
-#     and_(User.name == "Jalil")
-# ))
-
-user_tuple = (session.query(User.age, func.count(User.id))
-              .filter(User.age >= 34)
-              .filter(User.age < 50)
-
-              .group_by(User.age))
-
-for age, count in user_tuple:
-    print(age, count)
+if ali_only:
+    users = users.filter(User.name =='Kazem')
+if over_33:
+    users = users.filter(User.age > 33)

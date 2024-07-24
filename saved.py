@@ -80,6 +80,24 @@
 # for user in specific_users:
 #     print(f"{user.age} and {user.name}")
 
+# users = session.query(User).where(or_(User.age >= 34, User.name == "Jalil", User.id > 4)).all()
+#
+# for user in users:
+#     print(user.name, user.age)
+
+# users = session.query(User).where(or_(
+#     and_(User.age > 30, User.age == 34),
+#     and_(User.name == "Jalil")
+# ))
+
+# user_tuple = (session.query(User.age, func.count(User.id))
+#               .filter(User.age >= 34)
+# #               .filter(User.age < 50)
+# #               .group_by(User.age))
+#
+# for age, count in user_tuple:
+#     print(age, count)
+
 names = ["Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Taylor", "Anderson"]
 
 ages = [25, 30, 35, 22, 28, 40, 45, 50, 27, 33]
