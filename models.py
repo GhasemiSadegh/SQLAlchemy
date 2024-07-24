@@ -38,7 +38,7 @@ session.commit()
 #     and_(User.name == "Jalil")
 # ))
 
-users = session.query(User.age).group_by(User.age).all()
+users = session.query(User.name, func.count(User.id)).group_by(User.name).all()
 
 for user in users:
     print(user)
