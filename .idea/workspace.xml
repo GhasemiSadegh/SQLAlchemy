@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679d8855-6a46-4f16-a561-90e4b5db9740" name="Changes" comment="SQLAlchemy: Stuck with database is locked">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="679d8855-6a46-4f16-a561-90e4b5db9740" name="Changes" comment="SQLAlchemy: Practicing filter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
@@ -291,12 +290,27 @@
       <option name="project" value="LOCAL" />
       <updated>1721767205264</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="SQLAlchemy: Code working after restart">
+      <option name="closed" value="true" />
+      <created>1721817834877</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1721817834877</updated>
+    </task>
+    <task id="LOCAL-00029" summary="SQLAlchemy: Practicing filter">
+      <option name="closed" value="true" />
+      <created>1721818321631</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1721818321631</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="SQLAlchemy: Creating the project" />
     <MESSAGE value="SQLAlchemy: Creating an engine and a database" />
     <MESSAGE value="SQLAlchemy: Installing Plug in: DataBase Navigator" />
     <MESSAGE value="SQLAlchemy: Stuck with DB Navigator. First user created in the table" />
@@ -320,6 +334,8 @@
     <MESSAGE value="SQLAlchemy: Rewriting the session and re-adding a user to practice" />
     <MESSAGE value="SQLAlchemy: Rewriting everything to practice" />
     <MESSAGE value="SQLAlchemy: Stuck with database is locked" />
-    <option name="LAST_COMMIT_MESSAGE" value="SQLAlchemy: Stuck with database is locked" />
+    <MESSAGE value="SQLAlchemy: Code working after restart" />
+    <MESSAGE value="SQLAlchemy: Practicing filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="SQLAlchemy: Practicing filter" />
   </component>
 </project>
