@@ -27,15 +27,7 @@ session.commit()
 # session.add_all([user1, user2, user3, user4])
 # session.commit()
 
-# users = session.query(User).where(or_(User.age >= 34, User.name == "Jalil", User.id > 4)).all()
-#
-# for user in users:
-#     print(user.name, user.age)
-
-users = session.query(User).where(or_(
-    and_(User.age > 30, User.age == 34),
-    and_(User.name == "Jalil")
-))
+users = session.query(User).where(not_(User.name == "Jalil")).all()
 
 for user in users:
     print(user.name, user.age)
