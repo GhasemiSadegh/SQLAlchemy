@@ -1,4 +1,5 @@
 from sqlalchemy import Column, String, Integer, create_engine, not_, and_, or_
+from sqlalchemy import func
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 Base = declarative_base()
@@ -32,10 +33,12 @@ session.commit()
 # for user in users:
 #     print(user.name, user.age)
 
-users = session.query(User).where(or_(
-    and_(User.age > 30, User.age == 34),
-    and_(User.name == "Jalil")
-))
+# users = session.query(User).where(or_(
+#     and_(User.age > 30, User.age == 34),
+#     and_(User.name == "Jalil")
+# ))
+
+users = session.query(User.age).group_by(User.age).all()
 
 for user in users:
-    print(user.name, user.age)
+    print(user)
