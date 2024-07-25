@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679d8855-6a46-4f16-a561-90e4b5db9740" name="Changes" comment="SQLAlchemy: Start over to avoid unwanted errors">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+    <list default="true" id="679d8855-6a46-4f16-a561-90e4b5db9740" name="Changes" comment="SQLAlchemy: Relationships">
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,12 +374,19 @@
       <option name="project" value="LOCAL" />
       <updated>1721937813934</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="SQLAlchemy: Relationships">
+      <option name="closed" value="true" />
+      <created>1721938067693</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1721938067693</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="SQLAlchemy: Adding 10 users using random names and ages" />
     <MESSAGE value="SQLAlchemy: Fixing DB Navigator again" />
     <MESSAGE value="SQLAlchemy: DB Navigator fixed and table is extracted" />
     <MESSAGE value="SQLAlchemy: Comparing filter_by. and where., Creating a new table, Stuck with Error Database is locked!" />
@@ -404,6 +411,7 @@
     <MESSAGE value="SQLAlchemy: Creating a tuple for User age and count and then using filters and group" />
     <MESSAGE value="SQLAlchemy: Stuck with User not being recognized" />
     <MESSAGE value="SQLAlchemy: Start over to avoid unwanted errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="SQLAlchemy: Start over to avoid unwanted errors" />
+    <MESSAGE value="SQLAlchemy: Relationships" />
+    <option name="LAST_COMMIT_MESSAGE" value="SQLAlchemy: Relationships" />
   </component>
 </project>
