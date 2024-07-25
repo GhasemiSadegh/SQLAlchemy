@@ -13,3 +13,10 @@ address3 = Addresses(city="Chicago", state="IL", zip_code=60601)
 # associating addresses with the users
 user1.addresses.extend([address1, address2])
 user2.addresses.append(address3)
+
+session.add(user1)
+session.add(user2)
+
+session.commit()
+
+print(f"{user1.addresses = }")
