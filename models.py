@@ -21,6 +21,21 @@ class Addresses(BaseModel):
     city = Column(String)
     state = Column(String)
     zip_code = Column(Integer)
+    user_id = Column(ForeignKey("users.id"))
+
+    def __repr__(self):
+        return f"<Address(id={self.id}, city='{self.city}')>"
 
 
 class User(BaseModel):
+    __tablename__ = "users"
+
+    name = Column(String)
+    age = Column(Integer)
+    addresses = relationship(Addresses) # "Addresses" if not in the same file
+
+    def __repr__(self):
+        return f"<Address(id={self.id}, city='{self.city}')>"
+
+
+Base.metadata.create_all(engine)
