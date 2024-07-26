@@ -19,4 +19,4 @@ session.add(user2)
 
 session.commit()
 
-print(f"{user1.addresses = }")
+print(f"{user1.addresses=}")
