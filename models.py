@@ -1,5 +1,5 @@
 from sqlalchemy import (Column, ForeignKey, String, Integer, create_engine)
-from sqlalchemy.orm import declarative_base, sessionmaker, relationship
+from sqlalchemy.orm import Mapped, mapped_column, declarative_base, sessionmaker, relationship
 
 db_url = "sqlite:///database.db"
 engine = create_engine(db_url)
@@ -22,6 +22,7 @@ class Addresses(BaseModel):
     state = Column(String)
     zip_code = Column(Integer)
     user_id = Column(ForeignKey("users.id"))
+    user = relationship("User", back_populates="addresses")
 
     def __repr__(self):
         return f"<Address(id={self.id}, city='{self.city}')>"

@@ -17,6 +17,7 @@ user2.addresses.append(address3)
 session.add(user1)
 session.add(user2)
 
-session.commit()
+# session.commit()
 
 print(f"{user1.addresses=}")
+print(f"{address1.user=}")
